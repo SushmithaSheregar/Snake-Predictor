@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "742959480884",
+    "project_id": "snake-predictor",
+    "storage_bucket": "snake-predictor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742959480884:android:0e9ba4a56316659f874a61",
+        "android_client_info": {
+          "package_name": "com.example.snake_breed_prediction"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "742959480884-lsiihu9a6as82e2t2o7agt8n5t28tgos.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTotEoVJ7Z0YMpozbmc4fD7GUm4DKM3X4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "742959480884-lsiihu9a6as82e2t2o7agt8n5t28tgos.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
