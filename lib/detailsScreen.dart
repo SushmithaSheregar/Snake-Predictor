@@ -16,7 +16,7 @@ class SnakeDescription extends StatefulWidget {
 class _SnakeDescriptionState extends State<SnakeDescription> {
   final _formKey = GlobalKey<FormState>();
   String? value;
-  final items =['Mulund','Thane','Govandi','Vidyavihar','Mankhurd','Bhandup','Kanjurmarg','Powai'];
+  final items =['Virar','Govandi','Chembur','Goregaon','Borivali','Sakinaka','Andheri','Matunga','Dahisar','Mazgaon'];
   bool _loading=true;//check if an image has been chosen or not
   late File _image;//image that is chosen
   late List _output;//prediction made
@@ -114,14 +114,13 @@ class _SnakeDescriptionState extends State<SnakeDescription> {
               children: [
                  _loading == true?
                     Padding(
-                      padding: EdgeInsets.fromLTRB(15, 80, 15, 30),
+                      padding: EdgeInsets.fromLTRB(15, 50, 15, 70),
                       child:Text('\t\t\t\t\t\tUpload \t\tthe \t\tSnake\t \t\t\t\t\t\t\t\t\t\t\t\t\t\t Image !!!',
                     style: TextStyle(
                       fontSize: 24,
                       fontFamily: 'Times New Roman',
                       fontWeight: FontWeight.w600,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.pinkAccent,
+                      color: Colors.red,
                     ),
                     ),
                     ):
@@ -265,7 +264,7 @@ class _SnakeDescriptionState extends State<SnakeDescription> {
                     style: TextStyle(
                       fontSize: 20,
                       fontFamily: 'Times New Roman',
-                      color: Colors.greenAccent.shade700,
+                      color: Colors.red,
                     )
               ),
               dropdownColor: Colors.blue.shade900,
@@ -299,8 +298,11 @@ class _SnakeDescriptionState extends State<SnakeDescription> {
             MaterialButton(
               padding: EdgeInsets.all(15),
               onPressed: (){
-                 if(_formKey.currentState!.validate()){
-                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Prediction()));
+                 if(_formKey.currentState!.validate() && _image != null){
+                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Prediction(value :value.toString(),output:_output,image:_image)));
+                }
+                else{
+                  print("Please upload a snake image!");
                 }
               },
               textColor: Colors.white,

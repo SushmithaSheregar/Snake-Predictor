@@ -536,8 +536,8 @@ class _PrecautionsState extends State<Precautions> {
       effect: SlideEffect(
         dotHeight: 12,
         dotWidth: 12,
-        activeDotColor: Colors.red.shade800,
-        dotColor: Colors.yellow,
+        activeDotColor: Colors.black,
+        dotColor: Colors.grey,
 
       ),
       );
